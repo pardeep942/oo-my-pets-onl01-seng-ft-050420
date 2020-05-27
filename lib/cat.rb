@@ -1,21 +1,15 @@
-class Cat
-attr_accessor :owner, :name
+require 'pry'
 
-  @@all = []
+class Cat	class Cat
+attr_accessor :mood
+attr_reader :name
 
-  def initialize(name, owner)
+  def initialize(name)
     @name = name
-    @owner = owner
-    @all << self
-    save
+    @mood = "nervous"
   end
 
-  def save
-    @@all << self
+  def mood
+    @mood
   end
-
-  def self.all
-    @@all
-  end
-
 end
